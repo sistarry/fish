@@ -233,7 +233,7 @@ SUB_MENU[8]="52 酷雪云工具箱|53 科技lion工具箱"
 SUB_MENU[9]="54 GProxy加速|55 安装哪吒Agent|56 关闭哪吒监控SSH|57 卸载探针"
 SUB_MENU[10]="58 流量狗|59 TrafficCop流量监控"
 SUB_MENU[11]="60 系统快照恢复|61 本地备份|62 Rsync同步|63 压缩文件|64 解压文件|65 删除文件"
-SUB_MENU[12]="77 自动更新|88 更新脚本|99 卸载脚本"
+SUB_MENU[12]="88 更新脚本|99 卸载脚本"
 
 # 显示一级菜单
 show_main_menu() {
@@ -421,12 +421,10 @@ execute_choice() {
         64) bash <(curl -fsSL https://v6.gh-proxy.org/https://raw.githubusercontent.com/sistarry/toolbox/main/VPS/tarzip.sh) ;;
         65) bash <(curl -fsSL https://v6.gh-proxy.org/https://raw.githubusercontent.com/sistarry/toolbox/main/VPS/rmdocument.sh) ;;
 
-        #  自动更新脚本
-        77) bash <(curl -sL https://raw.githubusercontent.com/sistarry/toolbox/main/tool/update.sh) ;; 
         88)
             echo -e "${yellow}正在更新脚本...${reset}"
             # 下载最新版本覆盖本地脚本
-            curl -fsSL https://raw.githubusercontent.com/sistarry/toolbox/main/tool/vps-toolbox.sh -o "$INSTALL_PATH"
+            curl -fsSL https://v6.gh-proxy.org/https://raw.githubusercontent.com/sistarry/fish/main/vps-toolbox.sh -o "$INSTALL_PATH"
             if [[ $? -ne 0 ]]; then
                 echo -e "${red}更新失败，请检查网络或GitHub地址${reset}"
                 return 1
