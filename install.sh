@@ -8,7 +8,7 @@ RESET="\033[0m"
 
 # ================== 脚本路径 ==================
 SCRIPT_PATH="/root/vps-toolbox.sh"
-SCRIPT_URL="https://v6.gh-proxy.org/https://raw.githubusercontent.com/sistarry/fish/main/tool.sh"
+SCRIPT_URL="https://v6.gh-proxy.org/https://raw.githubusercontent.com/sistarry/fish/main/vps-toolbox"
 BIN_LINK_DIR="/usr/local/bin"
 
 # ================== 首次运行自动安装 ==================
